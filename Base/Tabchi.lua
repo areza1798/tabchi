@@ -1,13 +1,13 @@
 ------------------------
 -- In The Name Of GoD --
 --     Tabchi.lua     --
---    Bass By Naji    --
+--    Bass By reza    --
 ------------------------
 redis = (loadfile "Data/redis.lua")()
 redis = redis.connect('127.0.0.1', 6379)
 botapi = 488610809
 channel_id = -1001135894458
-channel_user = "@BG_TeaM"
+channel_user = "@victoriateam"
 local BOT = 1
 function dl_cb(arg, data)
 end
@@ -15,7 +15,7 @@ end
 	if redis:get('bibak'..BOT..'adminset') then
 		return true
 	else
-    	print("\n\27[36m                      @BG_Team \n >> Admin UserID :\n\27[31m                 ")
+    	print("\n\27[36m                      @victoriateam \n >> Admin UserID :\n\27[31m                 ")
     	local admin=io.read()
 		redis:del("bibak"..BOT.."admin")
     	redis:sadd("bibak"..BOT.."admin", admin)
@@ -371,7 +371,7 @@ end
 						input_message_content_ = {ID = "InputMessageDocument",
 							document_ = {ID = "InputFileLocal",
 							path_ = tostring(bibak)..".txt"},
-						caption_ = ""..tostring(matches).." List\n @BG_TeaM "}
+						caption_ = ""..tostring(matches).." List\n @victoriateam "}
 					}, dl_cb, nil)
 					return io.popen("rm -rf "..tostring(bibak)..".txt"):read("*all")
 				elseif text:match("^(reload stats)$")then
